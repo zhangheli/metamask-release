@@ -36,11 +36,11 @@
       ],
       "js": [
         "disable-console.js",
-        "globalthis.js",
         "lockdown-install.js",
         "lockdown-run.js",
         "lockdown-more.js",
-        "contentscript.js"
+        "contentscript.js",
+        "inpage.js"
       ],
       "run_at": "document_start",
       "all_frames": true
@@ -55,7 +55,7 @@
     }
   ],
   "default_locale": "en",
-  "description": "other build from git id: 5cfe11b3",
+  "description": "other build from git id: 0aaffd19",
   "icons": {
     "16": "images/icon-16.png",
     "19": "images/icon-19.png",
@@ -67,7 +67,7 @@
     "512": "images/icon-512.png"
   },
   "manifest_version": 2,
-  "name": "MetaMask Main lavamoat snow",
+  "name": "MetaMask lavamoat snow",
   "permissions": [
     "storage",
     "unlimitedStorage",
@@ -83,7 +83,7 @@
     "notifications"
   ],
   "short_name": "__MSG_appName__",
-  "content_security_policy": "frame-ancestors 'none'; script-src 'self'; object-src 'self'",
+  "content_security_policy": "frame-ancestors 'none'; script-src 'self' 'wasm-unsafe-eval'; object-src 'none'",
   "externally_connectable": {
     "matches": [
       "https://metamask.io/*"
@@ -92,6 +92,6 @@
       "*"
     ]
   },
-  "minimum_chrome_version": "80",
-  "version": "10.34.0"
+  "minimum_chrome_version": "89",
+  "version": "11.13.3"
 }
